@@ -1,22 +1,23 @@
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Jacutin Pogi - Home Page</title>
-  <link rel="stylesheet" href="custom-styles.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Jacutin Pogi</title>
+ <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
+ <header>
     <h1>HOME PAGE</h1>
-    <nav>
-      <ul>
-        <li><a href="self-introduction.html">me, myself, and I</a></li>
-        <li><a href="blog.html">bloggerist</a></li>
-        <li><a href="flex-langs.html">flex ko lungs</a></li>
-      </ul>
-    </nav>
-  </header>
+ </header>
   
-  <main>
+ <main>
+    <section id="home">
+      <h1>Welcome to my website!</h1>
+      <button onclick="navigateTo('self-introduction')">me, myself, and I</button>
+      <button onclick="navigateTo('blog')">my blog</button>
+      <button onclick="navigateTo('flexy')">flexy</button>
+    </section>
+    
     <section id="self-introduction">
       <h2>Self-Introduction</h2>
       <p>Hello there! I'm Mikko.</p>
@@ -32,10 +33,25 @@
         <img src="https://www.canva.com/design/DAF4Gqonsy4/gFw-B1wQ-WAAtRi6Xx-0PA/edit?utm_content=DAF4Gqonsy4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" alt="Infographic">
       </div>
     </section>
-  </main>
+    
+    <section id="blog">
+      <!-- Blog content here -->
+    </section>
+    
+    <section id="flexy">
+      <!-- Flexy content here -->
+    </section>
+ </main>
   
-  <footer>
+ <footer>
     <p>&copy; 2023 Jacutin, Jan</p>
-  </footer>
+ </footer>
+
+ <script>
+    function navigateTo(sectionId) {
+      document.getElementById('home').style.display = 'none';
+      document.getElementById(sectionId).style.display = 'block';
+    }
+ </script>
 </body>
 </html>
